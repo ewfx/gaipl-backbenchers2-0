@@ -1,0 +1,99 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 100%;
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styling */
+  .chat-header {
+    padding: 15px;
+    background: #2a2a2a;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Container for messages with scrolling */
+  .chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+  }
+  
+  /* Input section styling */
+  .chat-input {
+    padding: 15px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    width: 98%;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .chat-input button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    background: #2a2a2a;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /* Message container styling */
+  .message {
+    margin-bottom: 15px;
+    display: flex;
+  }
+  
+  /* Sent messages align to the right */
+  .message.sent {
+    justify-content: flex-end;
+  }
+  
+  /* Received messages align to the left */
+  .message.received {
+    justify-content: flex-start;
+  }
+  
+  /* Bubble styling */
+  .message .bubble {
+    max-width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .css-pl8gqh-MuiStack-root {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+}
+  
+  /* Styling for sent message bubble */
+  .message.sent .bubble {
+    background: #0084ff;
+    color: #fff;
+    border-bottom-right-radius: 0;
+  }
+  
+  /* Styling for received message bubble */
+  .message.received .bubble {
+    background: #e5e5ea;
+    color: #000;
+    border-bottom-left-radius: 0;
+  }
