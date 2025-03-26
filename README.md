@@ -1,3 +1,4 @@
+
 # **Local Setup & Runbook**
 
 ## **1️⃣ Local Setup Instructions**
@@ -96,7 +97,6 @@ tail -f logs/app.log
 | `.env not found` | Create `.env` file as per example above |
 | `Address already in use` | Kill process using `lsof -i :5000` and restart |
 
----
 
 ## **✅ Conclusion**
 Following these steps ensures a smooth local setup and troubleshooting. For any persistent issues, check logs (`logs/app.log`) or restart the environment.
