@@ -1,0 +1,50 @@
+2024 was the year that agents started to work in production. Not the wide-ranging, fully autonomous agents that people imagined with AutoGPT. But more vertical, narrowly scoped, highly controllable agents with custom cognitive architectures. It's still not easy to build these agents - but it's entirely possible.
+
+We launched LangGraph in early 2024 as a new take on an agentic framework. Incorporating lessons learned from LangChain, we made LangGraph very low level, controllable agentic framework. No hidden prompts, no obfuscated "cognitive architecture". Soon after it's launch, we saw LangGraph become the go-to default framework for agents.
+
+As the year closes, we wanted to highlight some of our favorite stories of companies building agents with LangGraph. As mentioned before, it's still hard to build agents, but these companies have figured out how. They've shared their lessons learned in various forms - blogs, case studies, talks, fireside chats. We hope that by amplifying their stories, their lessons learned, it enables every more agents to be built in 2025.
+
+Honorable mentions:
+Unify: An agent for GTM account qualification, featuring o1 as a planning agent
+OpenRecovery: An innovative and forward-looking application, especially with respect to memory
+Rexera: Great example of "single agent -> multi agent but uncontrollable (CrewAI) -> controllable multi agent (LangGraph)" journey that we see many user go through
+Komodo Health: Exciting to see agents working in highly-regulated domains like healthcare
+Airtop: Web agents are a big area, so it's great to see them for browser automation
+Tradestack: The first public-facing agent launched on LangGraph platform
+Athena Intelligence: One of the most advanced research agent platforms we know of
+GPT Researcher: The most advanced open-source research assistant
+#5: Uber
+At DPE, Uber talked about how they formed a dedicated Developer Platform AI team, and how they adopted LangGraph as a part of that. Especially interesting is how they are tackling large-scale code migrations with agentic systems
+
+We like this example because it shows that while general coding agents are undoubtably useful, there is also a large amount of value to be gained from building some internal coding tools yourself, which perform workflows that only really you know how to do best.
+
+DPE session video
+#4: AppFolio
+AppFolio's AI-powered copilot Realm-X has saved property managers over 10 hours per week. Realm-X provides a conversational interface that helps users understand the state of their business, get help, and execute actions in bulk – whether it’s querying information, sending messages, or scheduling actions related to residents, vendors, units, bills, or work orders and many more
+
+On their journey, they needed a controllable agent architecture to make this a reality — and so they chose LangGraph
+
+Case study
+#3: LinkedIn
+One of the big use cases for LLMs is in making data more accessible to everyone. LinkedIn recently rolled out SQL Bot, an AI-powered assistant internally
+
+This internal tool transforms natural language questions into SQL: it finds the right tables, writes queries, fixes errors, and enables employees across functions to independently access the data insights they need under the appropriate permissions.
+
+Behind the scenes, SQL Bot is a multi-agent system built on top of LangChain and LangGraph.
+
+LinkedIn Engineering Blog
+#2: Elastic
+Elastic was one of the first companies in my mind to launch an AI "agent". We covered their AI assistant in late January of 2024 - right at the start of the year. Back then it was using LangChain, but as they added more features, they migrated to LangGraph.
+
+Initial case study
+Follow up blog
+Excited to see the continued development of AI assistant!
+
+#1: Replit
+Replit released their agent this fall to pretty widespread adoption. When we've talked with them about the agent they've emphasized human-in-the-loop and multi-agent setup — both things we think will be key for agents in the future.
+
+We've chatted with them a few times about Replit Agent:
+
+Fireside Chat
+Case study
+Breakout Agents

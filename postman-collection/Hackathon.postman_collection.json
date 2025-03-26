@@ -1,0 +1,564 @@
+{
+	"info": {
+		"_postman_id": "70abdcaa-3cd9-44c2-aeac-f442bae22118",
+		"name": "Hackathon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2385806"
+	},
+	"item": [
+		{
+			"name": "Microservice-Predict",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Facing an issue with database latency\",\n    \"description\": \"Facing an issue with database latency\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/microservice/predict",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"microservice",
+						"predict"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"http://127.0.0.1:5000/predict\" \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\"title\": \"Database latency issue\", \"description\": \"Payment service taking too long to respond\"}'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Knowledgebase-Predict",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Getting payment service connection timeout\",\n    \"description\": \"Getting connection timeout\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/kb/predict",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"kb",
+						"predict"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"http://127.0.0.1:5000/predict\" \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\"title\": \"Database latency issue\", \"description\": \"Payment service taking too long to respond\"}'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Text summarize",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Title:Data base connective issue, \"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/summarize",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"summarize"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"http://127.0.0.1:5000/predict\" \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\"title\": \"Database latency issue\", \"description\": \"Payment service taking too long to respond\"}'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Incident Summarize",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/summarize_incident?incident_id=INC434389",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"summarize_incident"
+					],
+					"query": [
+						{
+							"key": "incident_id",
+							"value": "INC434389"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"http://127.0.0.1:5000/predict\" \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\"title\": \"Database latency issue\", \"description\": \"Payment service taking too long to respond\"}'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Resolve",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/event-stream"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/stream",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"stream"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"http://127.0.0.1:5000/predict\" \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\"title\": \"Database latency issue\", \"description\": \"Payment service taking too long to respond\"}'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Stream KB00001",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/event-stream"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"incident_id\": \"INC844121\",\n    \"description\": \"failed payment transactions\",\n    \"severity\": \"High\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/stream",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"stream"
+					]
+				},
+				"description": "Generated from cURL: curl -v -H \"Accept: text/event-stream\" http://127.0.0.1:5000/api/stream"
+			},
+			"response": []
+		},
+		{
+			"name": "Stream KB00002",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/event-stream"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"incident_id\": \"INC679492\",\n    \"description\": \"getting network outage\",\n    \"severity\": \"High\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/stream",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"stream"
+					]
+				},
+				"description": "Generated from cURL: curl -v -H \"Accept: text/event-stream\" http://127.0.0.1:5000/api/stream"
+			},
+			"response": []
+		},
+		{
+			"name": "Stream KB00003 Jenkins",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/event-stream"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"incident_id\": \"INC111135\",\n    \"description\": \"getting DatabaseConnection issue\",\n    \"severity\": \"High\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/stream",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"stream"
+					]
+				},
+				"description": "Generated from cURL: curl -v -H \"Accept: text/event-stream\" http://127.0.0.1:5000/api/stream"
+			},
+			"response": []
+		},
+		{
+			"name": "Stream KB00004",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/event-stream"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"incident_id\": \"INC765698\",\n    \"description\": \"Database deadlock in Notification Serv\",\n    \"severity\": \"High\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/stream",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"stream"
+					]
+				},
+				"description": "Generated from cURL: curl -v -H \"Accept: text/event-stream\" http://127.0.0.1:5000/api/stream"
+			},
+			"response": []
+		},
+		{
+			"name": "Stream KB00005",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/event-stream"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"incident_id\": \"INC652605\",\n    \"description\": \"Issue in payment connection timeout\",\n    \"severity\": \"High\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/stream",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"stream"
+					]
+				},
+				"description": "Generated from cURL: curl -v -H \"Accept: text/event-stream\" http://127.0.0.1:5000/api/stream"
+			},
+			"response": []
+		},
+		{
+			"name": "GET KB Article",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/event-stream"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/knowledgeArticle/KB00005",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"knowledgeArticle",
+						"KB00005"
+					]
+				},
+				"description": "Generated from cURL: curl -v -H \"Accept: text/event-stream\" http://127.0.0.1:5000/api/stream"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Incidents",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/incidents/INC540081",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"incidents",
+						"INC540081"
+					]
+				},
+				"description": "Generated from cURL: curl -v -H \"Accept: text/event-stream\" http://127.0.0.1:5000/api/stream"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Incidents",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/event-stream"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_id\": {\n        \"$oid\": \"67e0bb4356d3c9d340d63eb2\"\n    },\n    \"incident_id\": \"INC129382\",\n    \"title\": \"Database deadlock in Auth Service\",\n    \"description\": \"Auth Service is unresponsive, causing service degradation.\",\n    \"priority\": \"Low\",\n    \"status\": \"In Progress\",\n    \"reported_by\": \"Carla Hill\",\n    \"reported_date\": {\n        \"$date\": \"2025-03-20T18:30:00Z\"\n    },\n    \"affected_app\": \"Mobile Banking App\",\n    \"affected_microservice\": \"Auth Service\",\n    \"cpu_usage\": 16.97,\n    \"memory_usage\": 49.23,\n    \"kb_article_id\": \"KB061\",\n    \"summary\": {\n        \"chain_type\": \"StuffDocumentsChain\",\n        \"run_time\": 1.5875240409950493,\n        \"summary\": \"A database deadlock occurred in the Auth Service, causing a situation where two or more transactions\\nwere unable to proceed because each was waiting for the other to release a lock. This resulted in a\\ndeadlock situation that required intervention to resolve and prevent future occurrences.\",\n        \"tokens\": 5\n    },\n    \"agent_data\": {\n        \"Classifier\": {\n            \"agent\": \"Classifier\",\n            \"status\": \"completed\",\n            \"output\": \"Issue type: This issue can be classified as a \\\"Service Degradation\\\" issue.\"\n        },\n        \"KB Article Retriever\": {\n            \"agent\": \"KB Article Retriever\",\n            \"status\": \"completed\",\n            \"output\": \"Found KB: KB00002\"\n        },\n        \"Workflow Decision Agent\": {\n            \"agent\": \"Workflow Decision Agent\",\n            \"status\": \"completed\",\n            \"output\": {\n                \"run_pdf_agent\": true,\n                \"run_api_agent\": false,\n                \"run_telemetry_agent\": false,\n                \"run_workflow_agent\": false\n            }\n        },\n        \"PDF Reader\": {\n            \"agent\": \"PDF Reader\",\n            \"status\": \"completed\",\n            \"output\": \"© 2006 Cisco Systems, Inc. All rights reserved. SMBUF-1SMB University: Selling Cisco SMB Foundation Soluti ons \\nNetworking Fundamentals © 2006 Cisco Systems, Inc. All rights reserved. SMBUF-2Objectives \\n•Describe the function and operation of a hub, a swi tch and a \\nrouter \\n•Describe the function and operation of a firewall a nd a \\ngateway \\n•Describe the function and operation of Layer 2 swit ching, \\nLayer 3 switching, and routing \\n•Identify the layers of the OSI model \\n•Describe the functionali\"\n        },\n        \"Summary Generator\": {\n            \"agent\": \"Summary Generator\",\n            \"status\": \"completed\",\n            \"output\": {\n                \"issue_type\": \"This issue can be classified as a \\\"Service Degradation\\\" issue.\",\n                \"kb_article_id\": \"KB00002\",\n                \"actions_taken\": {\n                    \"run_pdf_agent\": true,\n                    \"run_api_agent\": false,\n                    \"run_telemetry_agent\": false,\n                    \"run_workflow_agent\": false\n                },\n                \"results\": {\n                    \"pdf_summary\": \"© 2006 Cisco Systems, Inc. All rights reserved. SMBUF-1SMB University: Selling Cisco SMB Foundation Soluti ons \\nNetworking Fundamentals © 2006 Cisco Systems, Inc. All rights reserved. SMBUF-2Objectives \\n•Describe the function and operation of a hub, a swi tch and a \\nrouter \\n•Describe the function and operation of a firewall a nd a \\ngateway \\n•Describe the function and operation of Layer 2 swit ching, \\nLayer 3 switching, and routing \\n•Identify the layers of the OSI model \\n•Describe the functionali\",\n                    \"api_response\": null,\n                    \"workflow_result\": null\n                }\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/update-incident/INC129382",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"update-incident",
+						"INC129382"
+					]
+				},
+				"description": "Generated from cURL: curl -v -H \"Accept: text/event-stream\" http://127.0.0.1:5000/api/stream"
+			},
+			"response": []
+		},
+		{
+			"name": "Telemetry",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/event-stream"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"node_id\": \"node_123\",\n        \"node_name\": \"Database\",\n        \"random\": false\n    },\n    {\n        \"node_id\": \"node_456\",\n        \"node_name\": \"Application\",\n        \"random\": false\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5002/telemetryData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"telemetryData"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "app",
+							"disabled": true
+						},
+						{
+							"key": "randomType",
+							"value": "false",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -v -H \"Accept: text/event-stream\" http://127.0.0.1:5000/api/stream"
+			},
+			"response": []
+		},
+		{
+			"name": "http://JENKINS_URL/job/YOUR_JOB_NAME/build",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "11ac8c7ea7c6a219a5c5cb8fbc191f5d2b",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "backbenchers",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jenkins/job/application-restart/build",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jenkins",
+						"job",
+						"application-restart",
+						"build"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \\\n  -u \"YOUR_USERNAME:YOUR_API_TOKEN\" \\\n  \"http://JENKINS_URL/job/YOUR_JOB_NAME/build\""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/chat",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": \"Which incident is related to Database b\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/search",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"search"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:5000/chat \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"message\": \"Hello\"}'"
+			},
+			"response": []
+		}
+	]
+}
