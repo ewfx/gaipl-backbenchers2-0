@@ -12,7 +12,7 @@ Ensure you have the following installed:
 
 ### **📂 Clone the Repository & Navigate to Project**
 ```sh
-git clone https://github.com/backbenchers2point0/AIEnabled-Integrated-Platform-Environment.git
+git clone [https://github.com/backbenchers2point0/AIEnabled-Integrated-Platform-Environment.git](https://github.com/ewfx/gaipl-backbenchers2-0.git)
 ```
 
 ### **📦 Create & Activate Virtual Environment**
